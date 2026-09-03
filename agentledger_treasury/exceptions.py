@@ -1,5 +1,5 @@
 """
-agentledger.exceptions
+agentledger_treasury.exceptions
 =======================
 Centralized exception hierarchy for AgentLedger. All errors raised by the
 treasury, reallocator, degrader, and integration layers derive from

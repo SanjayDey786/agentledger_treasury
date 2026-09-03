@@ -2,8 +2,8 @@ from decimal import Decimal
 
 import pytest
 
-from agentledger.core.degrader import BudgetVelocityTracker, DegradationEngine
-from agentledger.core.treasury import Treasury
+from agentledger_treasury.core.degrader import BudgetVelocityTracker, DegradationEngine
+from agentledger_treasury.core.treasury import Treasury
 
 
 @pytest.mark.asyncio

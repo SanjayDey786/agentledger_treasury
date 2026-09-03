@@ -1,5 +1,5 @@
 """
-agentledger.integrations.langchain_runnable
+agentledger_treasury.integrations.langchain_runnable
 ==============================================
 Module D (LangChain half): wraps any object exposing LangChain's
 `Runnable` protocol (`.invoke(input, config=None)` / `.ainvoke(...)`) with
@@ -15,12 +15,12 @@ from __future__ import annotations
 from decimal import Decimal
 from typing import Any, Dict, Optional
 
-from agentledger.core.degrader import DegradationEngine
-from agentledger.core.reallocator import Reallocator
-from agentledger.core.treasury import AllocationToken, Treasury
-from agentledger.exceptions import AllocationExceededError, CreditExtensionDeniedError
-from agentledger.pricing import DEFAULT_PRICING_TABLE, PricingTable
-from agentledger.usage import estimate_preflight_cost, extract_usage, settle_cost
+from agentledger_treasury.core.degrader import DegradationEngine
+from agentledger_treasury.core.reallocator import Reallocator
+from agentledger_treasury.core.treasury import AllocationToken, Treasury
+from agentledger_treasury.exceptions import AllocationExceededError, CreditExtensionDeniedError
+from agentledger_treasury.pricing import DEFAULT_PRICING_TABLE, PricingTable
+from agentledger_treasury.usage import estimate_preflight_cost, extract_usage, settle_cost
 
 
 class LedgerGuardedRunnable:

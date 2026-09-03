@@ -1,5 +1,5 @@
 """
-agentledger.core.treasury
+agentledger_treasury.core.treasury
 ==========================
 Module A: The Treasury Clearinghouse.
 
@@ -31,7 +31,7 @@ from decimal import Decimal
 from enum import Enum
 from typing import Dict, List, Optional
 
-from agentledger.exceptions import (
+from agentledger_treasury.exceptions import (
     AllocationAlreadySettledError,
     InsufficientTreasuryFundsError,
     SessionBudgetExhaustedError,

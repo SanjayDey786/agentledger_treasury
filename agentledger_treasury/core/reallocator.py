@@ -1,5 +1,5 @@
 """
-agentledger.core.reallocator
+agentledger_treasury.core.reallocator
 ==============================
 Module B: Fluid Credit Reallocation / Yield Engine.
 
@@ -13,10 +13,9 @@ other, already-settled nodes).
 from __future__ import annotations
 
 from decimal import Decimal
-from typing import Optional
 
-from agentledger.core.treasury import AllocationToken, Treasury
-from agentledger.exceptions import (
+from agentledger_treasury.core.treasury import AllocationToken, Treasury
+from agentledger_treasury.exceptions import (
     CreditExtensionDeniedError,
     UnknownAllocationTokenError,
 )

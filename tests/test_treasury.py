@@ -2,8 +2,8 @@ from decimal import Decimal
 
 import pytest
 
-from agentledger.core.treasury import Treasury
-from agentledger.exceptions import (
+from agentledger_treasury.core.treasury import Treasury
+from agentledger_treasury.exceptions import (
     AllocationAlreadySettledError,
     InsufficientTreasuryFundsError,
     SessionBudgetExhaustedError,

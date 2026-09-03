@@ -1,5 +1,5 @@
 """
-agentledger.integrations.langgraph
+agentledger_treasury.integrations.langgraph
 =====================================
 Module D (LangGraph half): a decorator / middleware class that wraps any
 LangGraph node function (sync or async, `state -> state` or
@@ -32,12 +32,12 @@ import inspect
 from decimal import Decimal
 from typing import Any, Awaitable, Callable, Dict, Optional, Union
 
-from agentledger.core.reallocator import Reallocator
-from agentledger.core.treasury import AllocationToken, Treasury
-from agentledger.core.degrader import DegradationEngine
-from agentledger.exceptions import AllocationExceededError, CreditExtensionDeniedError
-from agentledger.pricing import DEFAULT_PRICING_TABLE, PricingTable
-from agentledger.usage import estimate_preflight_cost, extract_usage, settle_cost
+from agentledger_treasury.core.reallocator import Reallocator
+from agentledger_treasury.core.treasury import AllocationToken, Treasury
+from agentledger_treasury.core.degrader import DegradationEngine
+from agentledger_treasury.exceptions import AllocationExceededError, CreditExtensionDeniedError
+from agentledger_treasury.pricing import DEFAULT_PRICING_TABLE, PricingTable
+from agentledger_treasury.usage import estimate_preflight_cost, extract_usage, settle_cost
 
 # LangGraph node state is, in practice, always a `dict`-like mapping (or any
 # object the graph's reducer functions know how to merge), so we type it as
