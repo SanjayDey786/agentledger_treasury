@@ -28,10 +28,10 @@ postgres = ["asyncpg>=0.29"]
 dev = ["pytest>=8.0", "pytest-asyncio>=0.23", "pytest-cov>=5.0", "mypy>=1.10", "ruff>=0.5"]
 
 [project.urls]
-Homepage = "https://github.com/SanjayDey786/agentledger"
-Repository = "https://github.com/SanjayDey786/agentledger"
-Changelog = "https://github.com/SanjayDey786/agentledger/blob/main/CHANGELOG.md"
-Issues = "https://github.com/SanjayDey786/agentledger/issues"
+Homepage = "https://github.com/SanjayDey786/agentledger_treasury"
+Repository = "https://github.com/SanjayDey786/agentledger_treasury"
+Changelog = "https://github.com/SanjayDey786/agentledger_treasury/blob/main/CHANGELOG.md"
+Issues = "https://github.com/SanjayDey786/agentledger_treasury/issues"
 
 [tool.setuptools.packages.find]
 include = ["agentledger_treasury*"]
