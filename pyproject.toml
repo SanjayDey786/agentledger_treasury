@@ -36,6 +36,14 @@ Issues = "https://github.com/SanjayDey786/agentledger/issues"
 [tool.setuptools.packages.find]
 include = ["agentledger_treasury*"]
 
+[tool.ruff.lint]
+# Explicit rule selection so CI behavior doesn't silently drift as ruff's
+# own default rule set changes across versions (E4/E7/E9 + F is ruff's
+# long-standing conservative default; newer ruff versions enable a much
+# broader set -- including import-sort and code-modernization rules -- if
+# this section is absent, which is what actually broke CI here).
+select = ["E4", "E7", "E9", "F"]
+
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
 
