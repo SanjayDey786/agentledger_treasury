@@ -1,5 +1,5 @@
 """
-agentledger.pricing
+agentledger_treasury.pricing
 ====================
 Standardized pricing tables used to compute pre-flight and post-flight USD
 costs for LLM calls, and to define the "cheaper tier" swap targets used by
@@ -13,11 +13,11 @@ micro-transactions in a long agentic session.
 from __future__ import annotations
 
 import threading
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from decimal import Decimal
 from typing import Dict, Optional
 
-from agentledger.exceptions import UnknownModelPricingError
+from agentledger_treasury.exceptions import UnknownModelPricingError
 
 
 def _per_million(usd_per_million: float) -> Decimal:

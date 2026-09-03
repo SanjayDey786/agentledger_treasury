@@ -1,12 +1,12 @@
 """
-agentledger.usage
+agentledger_treasury.usage
 ===================
 Shared helpers for extracting LiteLLM-style token usage metadata from the
 heterogeneous return shapes produced by LangGraph nodes, LangChain
 Runnables, and CrewAI Task outputs, and turning that into a settled USD
 cost via the `PricingTable`.
 
-Every integration wrapper in `agentledger.integrations.*` funnels through
+Every integration wrapper in `agentledger_treasury.integrations.*` funnels through
 `extract_usage` / `settle_cost` so pricing logic lives in exactly one place.
 """
 
@@ -16,7 +16,7 @@ from dataclasses import dataclass
 from decimal import Decimal
 from typing import Any, Optional
 
-from agentledger.pricing import DEFAULT_PRICING_TABLE, PricingTable
+from agentledger_treasury.pricing import DEFAULT_PRICING_TABLE, PricingTable
 
 
 @dataclass(frozen=True)

@@ -1,5 +1,5 @@
 """
-agentledger.core.degrader
+agentledger_treasury.core.degrader
 ============================
 Module C: ROI-Driven Degradation Engine.
 
@@ -8,19 +8,19 @@ drops below a configurable threshold *and* the workflow's step velocity is
 outstripping budget expectations (i.e. burning cash faster than the
 workflow is progressing toward completion), this engine intercepts routing
 decisions and forces the orchestrator to swap the LLM model for subsequent
-sub-tasks to a cheaper tier, using `agentledger.pricing.PricingTable` as the
+sub-tasks to a cheaper tier, using `agentledger_treasury.pricing.PricingTable` as the
 source of degrade-to targets.
 """
 
 from __future__ import annotations
 
 import time
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from decimal import Decimal
 from typing import Any, Callable, Dict, List, Optional
 
-from agentledger.core.treasury import Treasury
-from agentledger.pricing import DEFAULT_PRICING_TABLE, PricingTable
+from agentledger_treasury.core.treasury import Treasury
+from agentledger_treasury.pricing import DEFAULT_PRICING_TABLE, PricingTable
 
 
 @dataclass(frozen=True)

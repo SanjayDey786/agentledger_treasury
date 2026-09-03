@@ -32,16 +32,16 @@ import asyncio
 from decimal import Decimal
 from typing import Any, Dict
 
-from agentledger import BudgetVelocityTracker, DegradationEngine, Reallocator, Treasury
-from agentledger.exceptions import AllocationExceededError, CreditExtensionDeniedError
-from agentledger.integrations.langgraph import ledger_guard
+from agentledger_treasury import BudgetVelocityTracker, DegradationEngine, Reallocator, Treasury
+from agentledger_treasury.exceptions import AllocationExceededError, CreditExtensionDeniedError
+from agentledger_treasury.integrations.langgraph import ledger_guard
 
 
 class FakeLLM:
     """
     Stands in for a real chat-model call. Returns a dict shaped like a
     LangGraph node's output, including a LiteLLM-style `usage` block so
-    `agentledger.usage.extract_usage` can settle real cost against it.
+    `agentledger_treasury.usage.extract_usage` can settle real cost against it.
     """
 
     def __init__(self, prompt_tokens: int, completion_tokens: int) -> None:

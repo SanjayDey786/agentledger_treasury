@@ -2,9 +2,9 @@ from decimal import Decimal
 
 import pytest
 
-from agentledger.core.reallocator import Reallocator
-from agentledger.core.treasury import Treasury
-from agentledger.exceptions import CreditExtensionDeniedError
+from agentledger_treasury.core.reallocator import Reallocator
+from agentledger_treasury.core.treasury import Treasury
+from agentledger_treasury.exceptions import CreditExtensionDeniedError
 
 
 @pytest.mark.asyncio
